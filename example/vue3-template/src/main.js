@@ -1,1 +1,0 @@
-const hellow = 'hello word'

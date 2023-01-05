@@ -1,7 +1,7 @@
 {
-  "name": "vue3-template",
+  "name": "ts-template",
   "version": "1.0.0",
-  "description": "打包一个vue html文件",
+  "description": "打包一个TS html文件",
   "main": "index.js",
   "type": "module",
   "scripts": {
