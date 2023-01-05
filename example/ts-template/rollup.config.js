@@ -22,7 +22,6 @@ export default [
         entryFileNames: '[name].iife.[hash].js'
       }
     ],
-    // external: ['vkk-utils'], // todo
     plugins: [
       typescript({ sourceMap: true }),
       dev({ dirs: ['dist'] }),

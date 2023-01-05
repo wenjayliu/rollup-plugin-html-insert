@@ -1,19 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" >
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <title>test</title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but webapp doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-    
-  <script id="main">
+
 (function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
 (function () {
   'use strict';
@@ -71,10 +56,3 @@
   app.mount('#app');
 
 })();
-</script><style>
-.name[data-v-7ba5bd90] {
-    color:rgb(162, 92, 243);
-}
-
-</style></body>
-</html>

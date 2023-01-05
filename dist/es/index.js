@@ -30,6 +30,14 @@ const defaults = {
     publicPath: './',
     template: './public/index.html'
 };
+/**
+ * html 模板操作
+ * @param opts.entryFileNames    输出文件名
+ * @param opts.insert            注入路劲或者代码 code | path
+ * @param opts.publicPath        路径注入是前缀地址
+ * @param opts.template          html模板文件地址
+ * @returns 修改后html
+ */
 function htmlInsert(opts = {}) {
     const { template, insert, entryFileNames, publicPath } = Object.assign(defaults, opts);
     return {
@@ -44,7 +52,7 @@ function htmlInsert(opts = {}) {
             const body = getChildElement(html, 'body');
             /** { js: [], css: [] } */
             const files = getFiles(bundle);
-            console.log('files', files);
+            // console.log('files', files)
             // 通过路劲加载资源
             if (insert === 'path') {
                 const scripts = (files.js || []);
@@ -60,7 +68,7 @@ function htmlInsert(opts = {}) {
                     const entry = new HTMLElement('link', { id: name }, '', head, [0, 0]);
                     entry.setAttribute('href', `${publicPath}${fileName}`);
                     entry.setAttribute('rel', 'stylesheet');
-                    body.appendChild(entry);
+                    head.appendChild(entry);
                 }
             }
             // 直接将打包好的代码插入html
@@ -77,7 +85,7 @@ function htmlInsert(opts = {}) {
                     const { source, name } = links[index];
                     const entry = new HTMLElement('style', { id: name }, '', head, [0, 0]);
                     entry.appendChild(new TextNode(source, entry));
-                    body.appendChild(entry);
+                    head.appendChild(entry);
                 }
             }
             const source = doc.toString();
