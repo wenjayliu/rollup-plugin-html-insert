@@ -1,0 +1,37 @@
+// rollup.config.js
+import commonjs from '@rollup/plugin-commonjs'
+import resolve from '@rollup/plugin-node-resolve'
+import dev from 'rollup-plugin-dev' // 开发服务器
+import terser from '@rollup/plugin-terser' // 代码压缩
+import cleanupDir from 'rollup-plugin-cleanup-dir' // 清空目录
+import livereload from 'rollup-plugin-livereload'
+import css from 'rollup-plugin-css-only'
+import htmlInsert from 'rollup-plugin-html-insert'
+
+const production = !process.env.ROLLUP_WATCH
+
+export default [
+  {
+    input: {
+      main: 'src/main.js'
+    },
+    output: [
+      {
+        dir: 'dist',
+        format: 'iife', // "amd", "cjs", "system", "es", "iife" or "umd".
+        entryFileNames: '[name].iife.[hash].js'
+      }
+    ],
+    // external: ['vkk-utils'], // todo
+    plugins: [
+      dev({ dirs: ['dist'] }),
+      css({ output: 'bundle.css' }),
+      !production && livereload('dist'),
+      production && cleanupDir(),
+      production && terser(),
+      resolve(),
+      commonjs(),
+      htmlInsert()
+    ]
+  }
+]
