@@ -5,10 +5,10 @@ import postcss from 'rollup-plugin-postcss'
 import typescript from 'rollup-plugin-typescript2'
 import alias from '@rollup/plugin-alias'
 import livereload from 'rollup-plugin-livereload'
-import serve from 'rollup-plugin-serve'
 import htmlInsert from 'rollup-plugin-html-insert'
 import dev from 'rollup-plugin-dev' // 开发服务器
 import css from 'rollup-plugin-css-only'
+import cleanupDir from 'rollup-plugin-cleanup-dir' // 清空目录
 
 const extensions = ['.js', '.ts', '.vue']
 const production = !process.env.ROLLUP_WATCH // process.env.NODE_ENV === 'production' // production development
@@ -27,6 +27,7 @@ const plugins = [
   postcss({
     minimize: true
   }),
+  production && cleanupDir(),
   typescript({
     include: [/\.tsx?$/, /\.vue\?.*?lang=ts/],
     useTsconfigDeclarationDir: true

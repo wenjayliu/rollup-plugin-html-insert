@@ -19,7 +19,7 @@ specifiers:
   rollup-plugin-cleanup-dir: ^1.0.7
   rollup-plugin-css-only: ^4.3.0
   rollup-plugin-dev: ^2.0.4
-  rollup-plugin-html-insert: ^1.0.4
+  rollup-plugin-html-insert: ^1.0.5
   rollup-plugin-livereload: ^2.0.5
   rollup-plugin-postcss: ^4.0.2
   rollup-plugin-serve: ^2.0.2
@@ -53,7 +53,7 @@ devDependencies:
   rollup-plugin-cleanup-dir: 1.0.7_rollup@3.9.1
   rollup-plugin-css-only: 4.3.0_rollup@3.9.1
   rollup-plugin-dev: 2.0.4
-  rollup-plugin-html-insert: 1.0.4
+  rollup-plugin-html-insert: 1.0.5
   rollup-plugin-livereload: 2.0.5
   rollup-plugin-postcss: 4.0.2_postcss@8.4.20
   rollup-plugin-serve: 2.0.2
@@ -2516,8 +2516,8 @@ packages:
       - utf-8-validate
     dev: true
 
-  /rollup-plugin-html-insert/1.0.4:
-    resolution: {integrity: sha512-W9Hy53zHWrt58Ah0zQCwzuc3+oBwjxJx7VzmVt2xhoYbmRkQ0TnPGDh9nMkSt5B3ERCumHiV9OTAhRsYaafxrA==}
+  /rollup-plugin-html-insert/1.0.5:
+    resolution: {integrity: sha512-JgUVleVpCXCz8JA4oddxxb+KoYlQjfdgUJIDJep/H2CG076/9f4LwlG9CKS82CWZVXESgR1cG7z+PKNuw4hPgw==}
     dev: true
 
   /rollup-plugin-livereload/2.0.5:
