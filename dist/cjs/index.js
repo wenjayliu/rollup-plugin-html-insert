@@ -71,6 +71,9 @@ function htmlInsert(opts = {}) {
             const htmlTpl = fs__namespace.readFileSync(template).toString();
             const doc = nodeHtmlParser.parse(htmlTpl, { comment: true });
             const html = doc.querySelector('html');
+            if (!html) {
+                this.error("The input template doesn't contain the `html`");
+            }
             const head = getChildElement(html, 'head', false);
             const body = getChildElement(html, 'body');
             /** { js: [], css: [] } */

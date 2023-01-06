@@ -1,6 +1,8 @@
 # rollup-plugin-html-insert
 
-🍣 一个操作html的rollup的插件, 默认功能是将html css js 全部打包在一个html文件内。  
+🍣 一个操作html的rollup的插件, 默认功能是将`html` `css` `js` 全部打包在一个html文件内。   
+使用场景多用于开发demo, 无需通过`src`加载资源，全部代码在html文件内，方便发送和部署。  
+`example/sevlte-template` 一个简单的 Hello world 项目打包后仅4kb。  
 
 ## 安装插件
 使用 pnpm:

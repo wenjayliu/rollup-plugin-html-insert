@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-html-insert",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "rollup plugin to edit html template",
   "type": "module",
   "author": "wenjayliu <mr_wenjie@outlook.com>",

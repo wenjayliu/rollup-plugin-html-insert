@@ -1,7 +1,7 @@
 # rollup-plugin-html-insert
 
 🍣 A Rollup plugin which creates HTML files to serve Rollup bundles. The default function is to package all html css js in one html file.
-
+The usage scenario is mainly used for `demo` development. There is no need to load resources through 'src'. All the code is in html file, which is convenient for sending and deployment.
 ## Localized plugin docs
 
 - [简体中文](https://github.com/wenjayliu/rollup-plugin-html-insert/blob/main/readme.zh_CN.md) _(by [@wenjayliu](https://github.com/wenjayliu))_

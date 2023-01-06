@@ -56,8 +56,12 @@ export default function htmlInsert(opts: RollupHtmlOptions = {}): Plugin {
       // const htmlFileName = path.resolve(distDir, path.basename(template))
 
       const htmlTpl = fs.readFileSync(template).toString()
+      
       const doc = parse(htmlTpl, { comment: true })
       const html = doc.querySelector('html')
+      if (!html) {
+        this.error("The input template doesn't contain the `html`")
+      }
       const head = getChildElement(html, 'head', false)
       const body = getChildElement(html, 'body')
       /** { js: [], css: [] } */
