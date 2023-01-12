@@ -86,3 +86,5 @@ example: `htmlInsert({ publicPath: './'}) `
 default: `'./'`  
 
 
+about webpack
+https://chastephp.com/js/202003/83.html
